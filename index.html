@@ -6,6 +6,29 @@
     <title>For the Best Dad</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
+        .modal-image {
+            max-width: 100%;
+            max-height: 250px;
+            border-radius: 10px;
+            
+            /* These three lines are the magic trick to force it to center! */
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            
+            margin-top: 15px;
+            margin-bottom: 20px;
+            object-fit: cover;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+        
+        .missed-item {
+            margin-bottom: 30px;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 15px;
+            text-align: center; /* This forces all the text inside to center perfectly! */
+        }
+
         :root {
             --bg-color: #f0f4f8;
             --primary-color: #2c3e50;
@@ -176,7 +199,6 @@
             font-size: 1.2rem;
             line-height: 1.6;
             margin-bottom: 30px;
-            white-space: pre-wrap; /* Allows line breaks for unread lists */
         }
 
         .close-btn {
@@ -193,6 +215,41 @@
         .close-btn:hover {
             background-color: #e2e8f0;
         }
+
+        /* --- PAGINATION BUTTONS --- */
+        .pagination {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 25px;
+            padding-top: 15px;
+            border-top: 2px solid var(--bg-color);
+        }
+
+        .page-btn {
+            background-color: transparent;
+            color: var(--primary-color);
+            border: 1px solid var(--primary-color);
+            padding: 8px 12px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: 0.2s;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .page-btn:hover {
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+        .page-btn.active {
+            background-color: var(--primary-color);
+            color: white;
+            font-weight: bold;
+            pointer-events: none; /* Stops them from clicking the page they are already on */
+        }
+
     </style>
 </head>
 <body>
@@ -205,8 +262,8 @@
         <h2>Happy Birthday, Dad! ❤️</h2>
         <div class="button-container">
             <button id="big-btn" onclick="showTodayMessage()">💌 Open Today's Reason</button>
-            <button id="small-btn" onclick="showUnreadMessages()">
-                📬 Unread Messages <span id="unread-badge" class="badge">0</span>
+            <button id="small-btn" onclick="openPastMessages()">
+                📬 Past Messages
             </button>
         </div>
     </div>
@@ -219,19 +276,10 @@
         </div>
     </div>
 
+    <script src="reasons.js"></script>
+
     <script>
-        // ==========================================
-        // ADD YOUR 365 REASONS HERE
-        // ==========================================
-        const reasons = [
-            "You always know how to make me laugh when I'm feeling down.", // Day 1
-            "You give the absolute best bear hugs.",                       // Day 2
-            "You taught me how to be brave.",                              // Day 3
-            "You always listen to my stories, even the boring ones.",      // Day 4
-            "You work so hard for our family.",                            // Day 5
-            // ... Keep adding more strings inside quotes, separated by commas! 
-            // Make sure you have 365 of them eventually.
-        ];
+        
 
         // Fill the rest with placeholders just to prevent errors if you haven't written 365 yet
         while(reasons.length < 365) {
@@ -250,9 +298,6 @@
             localStorage.setItem('dadSiteStartDate', startDate);
         }
 
-        // Get read history from storage
-        let readHistory = JSON.parse(localStorage.getItem('dadSiteReadHistory')) || [];
-
         // Calculate what day we are currently on (0 to 364)
         const msPerDay = 24 * 60 * 60 * 1000;
         let todayDate = new Date().setHours(0,0,0,0);
@@ -262,73 +307,101 @@
         if (daysPassed > 364) daysPassed = 364; 
         if (daysPassed < 0) daysPassed = 0;
 
-        // Find unread messages (from Day 1 up to YESTERDAY)
-        let unreadIndices = [];
-        for (let i = 0; i < daysPassed; i++) {
-            if (!readHistory.includes(i)) {
-                unreadIndices.push(i);
-            }
-        }
-
-        // Update the notification badge for the small button
-        function updateBadge() {
-            const badge = document.getElementById('unread-badge');
-            if (unreadIndices.length > 0) {
-                badge.style.display = 'inline-block';
-                badge.innerText = unreadIndices.length;
-            } else {
-                badge.style.display = 'none';
-            }
-        }
-        updateBadge();
-
+        // --- TODAY'S MESSAGE ---
         function showTodayMessage() {
             const modalTitle = document.getElementById('modal-title');
             const modalText = document.getElementById('modal-text');
             
             modalTitle.innerText = `Reason #${daysPassed + 1}`;
-            modalText.innerText = reasons[daysPassed];
-
-            // Mark today's as read so it doesn't go to the unread pile tomorrow
-            if (!readHistory.includes(daysPassed)) {
-                readHistory.push(daysPassed);
-                localStorage.setItem('dadSiteReadHistory', JSON.stringify(readHistory));
-            }
+            
+            // Inject the text and image for today
+            modalText.innerHTML = `
+                <p>${reasons[daysPassed].text}</p>
+                <img src="${reasons[daysPassed].image}" class="modal-image" alt="Day ${daysPassed + 1}">
+            `;
 
             openModal();
         }
 
-        function showUnreadMessages() {
+        // --- PAGINATION VARIABLES ---
+        let currentPage = 1;
+        const messagesPerPage = 20;
+
+        // Opens the modal and starts on page 1
+        function openPastMessages() {
+            currentPage = 1;
+            renderPastMessages();
+            openModal();
+        }
+
+        // Handles the math and rendering of the pages
+        function renderPastMessages() {
             const modalTitle = document.getElementById('modal-title');
             const modalText = document.getElementById('modal-text');
-
-            if (unreadIndices.length === 0) {
-                modalTitle.innerText = "All Caught Up!";
-                modalText.innerText = "You have read all your past messages. Check the big button to see if you've opened today's message!";
-            } else {
-                modalTitle.innerText = "Missed Reasons";
-                
-                // Build a list of all missed messages
-                let missedText = "";
-                unreadIndices.forEach(index => {
-                    missedText += `Day ${index + 1}:\n${reasons[index]}\n\n`;
-                });
-                modalText.innerText = missedText.trim();
-
-                // Mark them all as read once he views them
-                unreadIndices.forEach(index => {
-                    readHistory.push(index);
-                });
-                localStorage.setItem('dadSiteReadHistory', JSON.stringify(readHistory));
-                
-                // Clear the unread array and update badge
-                unreadIndices = [];
-                updateBadge();
+            
+            modalTitle.innerText = "Past Messages";
+            
+            // Total unlocked messages (includes today)
+            let totalUnlocked = daysPassed + 1; 
+            
+            // Calculate how many pages we need
+            let totalPages = Math.ceil(totalUnlocked / messagesPerPage);
+            
+            // Figure out which messages belong on the current page
+            let startIndex = (currentPage - 1) * messagesPerPage;
+            let endIndex = Math.min(startIndex + messagesPerPage, totalUnlocked);
+            
+            let contentHTML = "";
+            
+            // Generate the messages for this specific page
+            for (let i = startIndex; i < endIndex; i++) {
+                contentHTML += `
+                <div class="missed-item">
+                    <strong>Day ${i + 1}</strong><br>
+                    <p>${reasons[i].text}</p>
+                    <img src="${reasons[i].image}" class="modal-image" alt="Day ${i + 1}">
+                </div>`;
             }
-
-            openModal();
+            
+            // Generate the pagination buttons at the bottom (if there is more than 1 page)
+            if (totalPages > 1) {
+                contentHTML += `<div class="pagination">`;
+                
+                // Previous Button
+                if (currentPage > 1) {
+                    contentHTML += `<button class="page-btn" onclick="changePage(${currentPage - 1})">« Prev</button>`;
+                }
+                
+                // Page Numbers
+                for (let p = 1; p <= totalPages; p++) {
+                    if (p === currentPage) {
+                        contentHTML += `<button class="page-btn active">${p}</button>`;
+                    } else {
+                        contentHTML += `<button class="page-btn" onclick="changePage(${p})">${p}</button>`;
+                    }
+                }
+                
+                // Next Button
+                if (currentPage < totalPages) {
+                    contentHTML += `<button class="page-btn" onclick="changePage(${currentPage + 1})">Next »</button>`;
+                }
+                
+                contentHTML += `</div>`;
+            }
+            
+            modalText.innerHTML = contentHTML;
         }
 
+        // Changes the page and instantly updates the modal
+        function changePage(pageNumber) {
+            currentPage = pageNumber;
+            renderPastMessages();
+            
+            // Automatically scroll back to the top of the modal for the new page
+            document.getElementById('modal-card').scrollTop = 0;
+        }
+
+        // --- MODAL CONTROLS ---
         function openModal() {
             document.getElementById('modal-overlay').classList.add('active');
         }
