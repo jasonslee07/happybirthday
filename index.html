@@ -259,7 +259,7 @@
     </div>
 
     <div id="main-container">
-        <h2>Happy Birthday, Dad! ❤️</h2>
+        <h2>Happy Birthday, Daddy! ❤️</h2>
         <div class="button-container">
             <button id="big-btn" onclick="showTodayMessage()">💌 Open Today's Reason</button>
             <button id="small-btn" onclick="openPastMessages()">
@@ -287,25 +287,32 @@
         }
 
         // ==========================================
-        // SYSTEM LOGIC (DO NOT EDIT BELOW THIS LINE UNLESS NEEDED)
+        // SYSTEM LOGIC (SYNCED ACROSS ALL DEVICES)
         // ==========================================
 
-        // Set or get the start date so the website knows what "Day 1" is
-        let startDate = localStorage.getItem('dadSiteStartDate');
-        if (!startDate) {
-            // If it's his first time opening it, set midnight of today as Day 1
-            startDate = new Date().setHours(0,0,0,0);
-            localStorage.setItem('dadSiteStartDate', startDate);
-        }
+        // 1. SET YOUR START DATE HERE (Year, Month Index, Day)
+        // IMPORTANT: Months in JavaScript start at 0 (January is 0, March is 2)
+        const dayOneDate = new Date(2026, 2, 7); // This is March 8, 2026
+        dayOneDate.setHours(0, 0, 0, 0);
 
-        // Calculate what day we are currently on (0 to 364)
+        // 2. Get today's date and reset the clock to midnight
+        let now = new Date();
+        now.setHours(0, 0, 0, 0);
+
+        // 3. Calculate how many days have passed since Day 1
         const msPerDay = 24 * 60 * 60 * 1000;
-        let todayDate = new Date().setHours(0,0,0,0);
-        let daysPassed = Math.floor((todayDate - startDate) / msPerDay);
+        let daysPassed = Math.floor((now - dayOneDate) / msPerDay);
         
-        // Ensure we don't go past 365 reasons
+        // Safety checks
         if (daysPassed > 364) daysPassed = 364; 
-        if (daysPassed < 0) daysPassed = 0;
+        
+        // This ensures that if he opens the site BEFORE the birthday, 
+        // it just shows Day 1 (or you can show a "Coming Soon" message)
+        if (daysPassed < 0) daysPassed = 0; 
+
+        // Rest of the code (showTodayMessage, renderPastMessages, etc.) stays the same!
+
+    
 
         // --- TODAY'S MESSAGE ---
         function showTodayMessage() {
