@@ -52,13 +52,13 @@ const reasons = [
 
     // day 9
     { 
-        text: "Not implemented", 
+        text: "Daddy is always proud of what I've been working on!", 
         image: "images/day009.jpg" 
     },
 
     // day 10
     { 
-        text: "Not implemented", 
+        text: "", 
         image: "images/day010.jpg" 
     },
 
