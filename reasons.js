@@ -58,7 +58,7 @@ const reasons = [
 
     // day 10
     { 
-        text: "", 
+        text: "Daddy is adventurous!", 
         image: "images/day010.jpg" 
     },
 
