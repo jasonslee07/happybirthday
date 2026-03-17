@@ -64,7 +64,7 @@ const reasons = [
 
     // day 11
     { 
-        text: "Not implemented", 
+        text: "\"Daddy takes me on adventures!\" - Mr. Ollie", 
         image: "images/day011.jpg" 
     },
 
