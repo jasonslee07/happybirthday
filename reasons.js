@@ -82,43 +82,43 @@ const reasons = [
 
     // day 14
     { 
-        text: "Not implemented", 
+        text: "Daddy always makes sure Jason has enough to eat!", 
         image: "images/day014.jpg" 
     },
 
     // day 15
     { 
-        text: "Not implemented", 
+        text: "Daddy brings the family on bike trips!", 
         image: "images/day015.jpg" 
     },
 
     // day 16
     { 
-        text: "Not implemented", 
+        text: "Daddy was there for all my first day of schools!", 
         image: "images/day016.jpg" 
     },
 
     // day 17
     { 
-        text: "Not implemented", 
+        text: "Daddy went to Outdoor Ed with me!", 
         image: "images/day017.jpg" 
     },
 
     // day 18
     { 
-        text: "Not implemented", 
+        text: "Daddy went to New York City with me!", 
         image: "images/day018.jpg" 
     },
 
     // day 19
     { 
-        text: "Not implemented", 
+        text: "Daddy was there for my first movie theater experience!", 
         image: "images/day019.jpg" 
     },
 
     // day 20
     { 
-        text: "Not implemented", 
+        text: "Daddy signed me up for Cub Scouts!", 
         image: "images/day020.jpg" 
     },
 
