@@ -124,44 +124,242 @@ const reasons = [
 
     // day 21
     { 
-        text: "Not implemented", 
+        text: "Daddy plays Monopoly with us even though it's such a long game!", 
         image: "images/day021.jpg" 
     },
 
     // day 22
     { 
-        text: "Not implemented", 
+        text: "Daddy was there for my first 3D movie theater experience!", 
         image: "images/day022.jpg" 
     },
 
     // day 23
     { 
-        text: "Not implemented", 
+        text: "Daddy rode the bicycle with us at Ocean City!", 
         image: "images/day023.jpg" 
     },
     
     // day 24
     { 
-        text: "Not implemented", 
+        text: "Daddy was there for my first ever musical play performance!", 
         image: "images/day024.jpg" 
     },
 
     // day 25
     { 
-        text: "Not implemented", 
+        text: "Daddy bought me the biggest Lego sets!", 
         image: "images/day025.jpg" 
     },
 
     // day 26
     { 
-        text: "Not implemented", 
+        text: "Daddy always hosts the best Thanksgiving dinners!", 
         image: "images/day026.jpg" 
     },
 
     // day 27
     { 
-        text: "Not implemented", 
+        text: "Daddy went with me to my first Sinoquipe campout!", 
         image: "images/day027.jpg" 
+    },
+
+    // day 28
+    { 
+        text: "Not implemented", 
+        image: "images/day028.jpg" 
+    },
+
+    // day 29
+    { 
+        text: "Not implemented", 
+        image: "images/day029.jpg" 
+    },
+
+    // day 30
+    { 
+        text: "Not implemented", 
+        image: "images/day030.jpg" 
+    },
+
+    // day 31
+    { 
+        text: "Not implemented", 
+        image: "images/day031.jpg" 
+    },
+
+    // day 32
+    { 
+        text: "Not implemented", 
+        image: "images/day032.jpg" 
+    },
+
+    // day 33
+    { 
+        text: "Not implemented", 
+        image: "images/day033.jpg" 
+    },
+
+    // day 34
+    { 
+        text: "Not implemented", 
+        image: "images/day034.jpg" 
+    },
+
+    // day 35
+    { 
+        text: "Not implemented", 
+        image: "images/day035.jpg" 
+    },
+
+    // day 36
+    { 
+        text: "Not implemented", 
+        image: "images/day036.jpg" 
+    },
+
+    // day 37
+    { 
+        text: "Not implemented", 
+        image: "images/day037.jpg" 
+    },
+
+    // day 38
+    { 
+        text: "Not implemented", 
+        image: "images/day038.jpg" 
+    },
+
+    // day 39
+    { 
+        text: "Not implemented", 
+        image: "images/day039.jpg" 
+    },
+
+    // day 40
+    { 
+        text: "Not implemented", 
+        image: "images/day040.jpg" 
+    },
+
+    // day 41
+    { 
+        text: "Not implemented", 
+        image: "images/day041.jpg" 
+    },
+
+    // day 42
+    { 
+        text: "Not implemented", 
+        image: "images/day042.jpg" 
+    },
+
+    // day 43
+    { 
+        text: "Not implemented", 
+        image: "images/day043.jpg" 
+    },
+
+    // day 44
+    { 
+        text: "Not implemented", 
+        image: "images/day044.jpg" 
+    },
+
+    // day 45
+    { 
+        text: "Not implemented", 
+        image: "images/day045.jpg" 
+    },
+
+    // day 46
+    { 
+        text: "Not implemented", 
+        image: "images/day046.jpg" 
+    },
+
+    // day 47
+    { 
+        text: "Not implemented", 
+        image: "images/day047.jpg" 
+    },
+
+    // day 48
+    { 
+        text: "Not implemented", 
+        image: "images/day048.jpg" 
+    },
+
+    // day 49
+    { 
+        text: "Not implemented", 
+        image: "images/day049.jpg" 
+    },
+
+    // day 50
+    { 
+        text: "Not implemented", 
+        image: "images/day050.jpg" 
+    },
+
+    // day 51
+    { 
+        text: "Not implemented", 
+        image: "images/day051.jpg" 
+    },
+
+    // day 52
+    { 
+        text: "Not implemented", 
+        image: "images/day052.jpg" 
+    },
+
+    // day 53
+    { 
+        text: "Not implemented", 
+        image: "images/day053.jpg" 
+    },
+
+    // day 54
+    { 
+        text: "Not implemented", 
+        image: "images/day054.jpg" 
+    },
+
+    // day 55
+    { 
+        text: "Not implemented", 
+        image: "images/day055.jpg" 
+    },
+
+    // day 56
+    { 
+        text: "Not implemented", 
+        image: "images/day056.jpg" 
+    },
+
+    // day 57
+    { 
+        text: "Not implemented", 
+        image: "images/day057.jpg" 
+    },
+
+    // day 58
+    { 
+        text: "Not implemented", 
+        image: "images/day058.jpg" 
+    },
+
+    // day 59
+    { 
+        text: "Not implemented", 
+        image: "images/day059.jpg" 
+    },
+
+    // day 60
+    { 
+        text: "Not implemented", 
+        image: "images/day060.jpg" 
     }
 
 ];
