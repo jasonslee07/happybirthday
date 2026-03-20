@@ -360,13 +360,17 @@
             
             let contentHTML = "";
             
-            // Generate the messages for this specific page
+            // Generate the messages for this specific page (in reverse order!)
             for (let i = startIndex; i < endIndex; i++) {
+                
+                // This single line of math flips the order so newest is on top
+                let actualIndex = totalUnlocked - 1 - i; 
+
                 contentHTML += `
                 <div class="missed-item">
-                    <strong>Day ${i + 1}</strong><br>
-                    <p>${reasons[i].text}</p>
-                    <img src="${reasons[i].image}" class="modal-image" alt="Day ${i + 1}">
+                    <strong>Day ${actualIndex + 1}</strong><br>
+                    <p>${reasons[actualIndex].text}</p>
+                    <img src="${reasons[actualIndex].image}" class="modal-image" alt="Day ${actualIndex + 1}">
                 </div>`;
             }
             
