@@ -166,103 +166,103 @@ const reasons = [
 
     // day 28
     { 
-        text: "Not implemented", 
+        text: "Daddy brought me on beach vacations!", 
         image: "images/day028.jpg" 
     },
 
     // day 29
     { 
-        text: "Not implemented", 
+        text: "Daddy dropped me off and picked me up from preschool!", 
         image: "images/day029.jpg" 
     },
 
     // day 30
     { 
-        text: "Not implemented", 
+        text: "Daddy bought me my first ever bike!", 
         image: "images/day030.jpg" 
     },
 
     // day 31
     { 
-        text: "Not implemented", 
+        text: "Daddy bought me my favorite stuff animal: Fatty Patty!", 
         image: "images/day031.jpg" 
     },
 
     // day 32
     { 
-        text: "Not implemented", 
+        text: "Daddy was always invested with my growth!", 
         image: "images/day032.jpg" 
     },
 
     // day 33
     { 
-        text: "Not implemented", 
+        text: "Daddy rode Superman with me!", 
         image: "images/day033.jpg" 
     },
 
     // day 34
     { 
-        text: "Not implemented", 
+        text: "Daddy got me my favorite rolls from Wasabi!", 
         image: "images/day034.jpg" 
     },
 
     // day 35
     { 
-        text: "Not implemented", 
+        text: "Daddy always made sure I was full at Love Sushi!", 
         image: "images/day035.jpg" 
     },
 
     // day 36
     { 
-        text: "Not implemented", 
+        text: "Daddy made sure Jason always had nice clothes to wear!", 
         image: "images/day036.jpg" 
     },
 
     // day 37
     { 
-        text: "Not implemented", 
+        text: "Daddy brought me to Busch Gardens!", 
         image: "images/day037.jpg" 
     },
 
     // day 38
     { 
-        text: "Not implemented", 
+        text: "Daddy bought me the yummiest foods at Cook Out!", 
         image: "images/day038.jpg" 
     },
 
     // day 39
     { 
-        text: "Not implemented", 
+        text: "Daddy took me on vacation to Myrtle Beach!", 
         image: "images/day039.jpg" 
     },
 
     // day 40
     { 
-        text: "Not implemented", 
+        text: "Daddy made sure to keep me full during road trips!", 
         image: "images/day040.jpg" 
     },
 
     // day 41
     { 
-        text: "Not implemented", 
+        text: "Daddy made sure I didn't get lost in NYC!", 
         image: "images/day041.jpg" 
     },
 
     // day 42
     { 
-        text: "Not implemented", 
+        text: "Daddy always provided comfort food for me!", 
         image: "images/day042.jpg" 
     },
 
     // day 43
     { 
-        text: "Not implemented", 
+        text: "Daddy treated me to the tastiest noodles at Yu Noodles!", 
         image: "images/day043.jpg" 
     },
 
     // day 44
     { 
-        text: "Not implemented", 
+        text: "Daddy drove me to Resica Falls!", 
         image: "images/day044.jpg" 
     },
 
