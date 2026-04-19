@@ -268,37 +268,37 @@ const reasons = [
 
     // day 45
     { 
-        text: "Not implemented", 
+        text: "Daddy always has the best family dinners!", 
         image: "images/day045.jpg" 
     },
 
     // day 46
     { 
-        text: "Not implemented", 
+        text: "\"Daddy brings me to so many dog parks!\" - Mr. Ollie", 
         image: "images/day046.jpg" 
     },
 
     // day 47
     { 
-        text: "Not implemented", 
+        text: "Daddy brought me to Wildwood!", 
         image: "images/day047.jpg" 
     },
 
     // day 48
     { 
-        text: "Not implemented", 
+        text: "Daddy bought us some very delicious burgers from Route 66!", 
         image: "images/day048.jpg" 
     },
 
     // day 49
     { 
-        text: "Not implemented", 
+        text: "\"Daddy always makes sure I'm having fun on vacation\" - Mr. Ollie", 
         image: "images/day049.jpg" 
     },
 
     // day 50
     { 
-        text: "Not implemented", 
+        text: "\"Daddy bought me to play in the ocean!\" - Mr. Ollie", 
         image: "images/day050.jpg" 
     },
 
