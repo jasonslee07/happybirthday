@@ -304,62 +304,302 @@ const reasons = [
 
     // day 51
     { 
-        text: "Not implemented", 
+        text: "Daddy is always there to celebrate my birthday!", 
         image: "images/day051.jpg" 
     },
 
     // day 52
     { 
-        text: "Not implemented", 
+        text: "Daddy always makes sure we have the best holidays!", 
         image: "images/day052.jpg" 
     },
 
     // day 53
     { 
-        text: "Not implemented", 
+        text: "\"Daddy makes sure I never get left out during family games!\" - Mr. Ollie", 
         image: "images/day053.jpg" 
     },
 
     // day 54
     { 
-        text: "Not implemented", 
+        text: "Daddy bought me all my fancy clothes!", 
         image: "images/day054.jpg" 
     },
 
     // day 55
     { 
-        text: "Not implemented", 
+        text: "\"Daddy is always making sure my days are filled with excitment!\" - Mr. Ollie", 
         image: "images/day055.jpg" 
     },
 
     // day 56
     { 
-        text: "Not implemented", 
+        text: "\"Daddy remembers to pick me up from ollie camp!\" - Mr. Ollie", 
         image: "images/day056.jpg" 
     },
 
     // day 57
     { 
-        text: "Not implemented", 
+        text: "Daddy celebrates my achievements!", 
         image: "images/day057.jpg" 
     },
 
     // day 58
     { 
-        text: "Not implemented", 
+        text: "Daddy let me use the mini for all of my senior year!", 
         image: "images/day058.jpg" 
     },
 
     // day 59
     { 
-        text: "Not implemented", 
+        text: "Daddy visited me during my Blue Mountain festival!", 
         image: "images/day059.jpg" 
     },
 
     // day 60
     { 
-        text: "Not implemented", 
+        text: "Daddy makes family game night so much more fun!", 
         image: "images/day060.jpg" 
+    },
+
+    // day 61
+    { 
+        text: "Daddy taught me how to drive!", 
+        image: "images/day061.jpg" 
+    },
+
+    // day 62
+    { 
+        text: "Daddy cooks the best BBQ!", 
+        image: "images/day062.jpg" 
+    },
+
+    // day 63
+    { 
+        text: "Daddy empowered my youth orchestra experience!", 
+        image: "images/day063.jpg" 
+    },
+
+    // day 64
+    { 
+        text: "Daddy supported me while I was SPL!", 
+        image: "images/day064.jpg" 
+    },
+
+    // day 65
+    { 
+        text: "Daddy got me my first iPhone!", 
+        image: "images/day065.jpg" 
+    },
+
+    // day 66
+    { 
+        text: "Daddy supported me through my first music competition!", 
+        image: "images/day066.jpg" 
+    },
+
+    // day 67
+    { 
+        text: "Daddy supported me through my first time at All-State!", 
+        image: "images/day067.jpg" 
+    },
+
+    // day 68
+    { 
+        text: "Not implemented", 
+        image: "images/day068.jpg" 
+    },
+
+    // day 69
+    { 
+        text: "Not implemented", 
+        image: "images/day069.jpg" 
+    },
+
+    // day 70
+    { 
+        text: "Not implemented", 
+        image: "images/day070.jpg" 
+    },
+
+    // day 71
+    { 
+        text: "Not implemented", 
+        image: "images/day071.jpg" 
+    },
+
+    // day 72
+    { 
+        text: "Not implemented", 
+        image: "images/day072.jpg" 
+    },
+
+    // day 73
+    { 
+        text: "Not implemented", 
+        image: "images/day073.jpg" 
+    },
+
+    // day 74
+    { 
+        text: "Not implemented", 
+        image: "images/day074.jpg" 
+    },
+
+    // day 75
+    { 
+        text: "Not implemented", 
+        image: "images/day075.jpg" 
+    },
+
+    // day 76
+    { 
+        text: "Not implemented", 
+        image: "images/day076.jpg" 
+    },
+
+    // day 77
+    { 
+        text: "Not implemented", 
+        image: "images/day077.jpg" 
+    },
+
+    // day 78
+    { 
+        text: "Not implemented", 
+        image: "images/day078.jpg" 
+    },
+
+    // day 79
+    { 
+        text: "Not implemented", 
+        image: "images/day079.jpg" 
+    },
+
+    // day 80
+    { 
+        text: "Not implemented", 
+        image: "images/day080.jpg" 
+    },
+
+    // day 81
+    { 
+        text: "Not implemented", 
+        image: "images/day081.jpg" 
+    },
+    
+    // day 82
+    { 
+        text: "Not implemented", 
+        image: "images/day082.jpg" 
+    },
+
+    // day 83
+    { 
+        text: "Not implemented", 
+        image: "images/day083.jpg" 
+    },
+
+    // day 84
+    { 
+        text: "Not implemented", 
+        image: "images/day084.jpg" 
+    },
+
+    // day 85
+    { 
+        text: "Not implemented", 
+        image: "images/day085.jpg" 
+    },
+
+    // day 86
+    { 
+        text: "Not implemented", 
+        image: "images/day086.jpg" 
+    },
+
+    // day 87
+    { 
+        text: "Not implemented", 
+        image: "images/day087.jpg" 
+    },
+
+    // day 88
+    { 
+        text: "Not implemented", 
+        image: "images/day088.jpg" 
+    },
+
+    // day 89
+    { 
+        text: "Not implemented", 
+        image: "images/day089.jpg" 
+    },
+
+    // day 90
+    { 
+        text: "Not implemented", 
+        image: "images/day090.jpg" 
+    },
+
+    // day 91
+    { 
+        text: "Not implemented", 
+        image: "images/day091.jpg" 
+    },
+
+    // day 92
+    { 
+        text: "Not implemented", 
+        image: "images/day092.jpg" 
+    },
+
+    // day 93
+    { 
+        text: "Not implemented", 
+        image: "images/day093.jpg" 
+    },
+
+    // day 94
+    { 
+        text: "Not implemented", 
+        image: "images/day094.jpg" 
+    },
+
+    // day 95
+    { 
+        text: "Not implemented", 
+        image: "images/day095.jpg" 
+    },
+
+    // day 96
+    { 
+        text: "Not implemented", 
+        image: "images/day096.jpg" 
+    },
+
+    // day 97
+    { 
+        text: "Not implemented", 
+        image: "images/day097.jpg" 
+    },
+
+    // day 98
+    { 
+        text: "Not implemented", 
+        image: "images/day098.jpg" 
+    },
+
+    // day 99
+    { 
+        text: "Not implemented", 
+        image: "images/day099.jpg" 
+    },
+
+    // day 100
+    { 
+        text: "Not implemented", 
+        image: "images/day100.jpg" 
     }
 
 ];
